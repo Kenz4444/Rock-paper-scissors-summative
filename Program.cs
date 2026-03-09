@@ -25,6 +25,7 @@
         static void Part1()
         {
             Console.Clear();
+            string ready;
             Console.WriteLine("THE RULES");
             Console.WriteLine();
             Console.WriteLine("\t 1. You have $500 current in your bank account.");
@@ -39,8 +40,15 @@
             Console.WriteLine();
             Console.WriteLine("\t 6. IF you lose best out of three, you lose all your money!");
             Console.WriteLine();
-            Console.WriteLine("READY TO PLAY? PRESS ENTER");
-            Console.ReadLine();
+            Console.WriteLine("READY TO PLAY? TYPE YES");
+            ready= Console.ReadLine();
+             if (ready.ToLower() == "yes")
+            {
+                Part2();
+            }
+            
+
+            
             
         }
 
@@ -49,7 +57,50 @@
 
         static void Part2()
         {
-            Console.WriteLine("\t \t \t WELCOME TO THE GAME!");
+            double bankAccount = 500;
+            string yesOrNoBet;
+            double bettingAmount;
+            bool done=false;
+            int round = 1;
+           
+            
+            
+            
+            Console.Clear();
+            Console.WriteLine("\t \t \t \t \t \t WELCOME TO THE GAME!");
+            Console.WriteLine("Right now you have $"+ bankAccount + " would you like to bet anything on your first round?");
+            Console.WriteLine("YES OR NO");
+            yesOrNoBet = Console.ReadLine();
+
+            while (!done)
+            {
+                if (yesOrNoBet.ToLower() == "yes")
+                {
+                    
+                    Console.WriteLine("How much would you like to bet? (Just type the number)");
+                    double.TryParse(Console.ReadLine(), out bettingAmount);
+                    if (bettingAmount > 200)
+                    {
+                        Console.WriteLine("You can only bet up to $200!");
+                    }
+                    else if (bettingAmount <= 200)
+                    {
+                        
+                        Console.Clear();
+                        Console.WriteLine("ROUND " + round);
+                        Console.WriteLine("Choose one of the following: ");
+                    }
+
+                }
+
+
+                else if (yesOrNoBet.ToLower() == "no")
+                {
+                    Console.WriteLine("Okay good luck!");
+                }
+            }
+            
+
         }
     }
 }
