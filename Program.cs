@@ -36,15 +36,17 @@
             Console.WriteLine();
             Console.WriteLine("\t 4. You will then get a count down and if what you picked beats the computer, the money you bet, will go to your \t account. If you lose, the money will be taken from your account");
             Console.WriteLine();
-            Console.WriteLine("\t 5. you will have a total of 3 rounds, best of three wins. if you run out of money before your 3rd try, you lose");
-            Console.WriteLine();
-            Console.WriteLine("\t 6. IF you lose best out of three, you lose all your money!");
+            Console.WriteLine("\t 5. IF you lose best out of three, you lose all your money!");
             Console.WriteLine();
             Console.WriteLine("READY TO PLAY? TYPE YES");
             ready= Console.ReadLine();
              if (ready.ToLower() == "yes")
             {
                 Part2();
+            }
+            else
+            {
+                Part1();
             }
             
 
@@ -62,45 +64,72 @@
             double bettingAmount;
             bool done=false;
             int round = 1;
-           
-            
-            
-            
-            Console.Clear();
-            Console.WriteLine("\t \t \t \t \t \t WELCOME TO THE GAME!");
-            Console.WriteLine("Right now you have $"+ bankAccount + " would you like to bet anything on your first round?");
-            Console.WriteLine("YES OR NO");
-            yesOrNoBet = Console.ReadLine();
+            int bettingMax = 200;
+            int rock = 1, paper = 2, scissors = 3;
+
+
+            //Random generator = new Random();
+            //int randNum; 
+            //randNum = generator.Next(1,4);
 
             while (!done)
             {
-                if (yesOrNoBet.ToLower() == "yes")
+                Console.Clear();
+                Console.WriteLine("\t \t \t \t \t \t WELCOME TO THE GAME!");
+                Console.WriteLine("Right now you have $" + bankAccount + ". How much would you like to bet? your betting max is $200 (Just type the number)");
+                
+                while(!double.TryParse(Console.ReadLine(), out bettingAmount) || bettingAmount < 0 || bettingAmount > bettingMax)
                 {
-                    
-                    Console.WriteLine("How much would you like to bet? (Just type the number)");
-                    double.TryParse(Console.ReadLine(), out bettingAmount);
-                    if (bettingAmount > 200)
-                    {
-                        Console.WriteLine("You can only bet up to $200!");
-                    }
-                    else if (bettingAmount <= 200)
-                    {
-                        
-                        Console.Clear();
-                        Console.WriteLine("ROUND " + round);
-                        Console.WriteLine("Choose one of the following: ");
-                    }
+                    Console.WriteLine("Invalid bet. Try again");
+                    Console.ReadLine();
 
                 }
+                
+                    Console.Clear() ;
+                    Console.WriteLine("Okay! You are betting " + bettingAmount + " on this round!");
+                    Console.WriteLine("Choose one of the following:");
+                    Console.WriteLine("\t Rock" + rock);
+                    Console.WriteLine("\t 2.) paper");
+                    Console.WriteLine("\t 3.) scissors");
+
+                
+               
 
 
-                else if (yesOrNoBet.ToLower() == "no")
-                {
-                    Console.WriteLine("Okay good luck!");
-                }
+
+
+
+
+
+
             }
+
+
+
+
+
             
 
-        }
+
+                    
+
+                   
+                       
+                        
+                        
+
+                    
+
+            }
+
+                 
+                //else if (yesOrNoBet.ToLower() == "no")
+                //{
+                //    Console.WriteLine("Okay good luck!");
+                //}
+            
+            
+
+        
     }
 }
