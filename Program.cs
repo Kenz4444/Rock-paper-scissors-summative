@@ -233,6 +233,7 @@
                     newBalance = bankAccount - bettingAmount;
                     Console.WriteLine("Sorry! the computer picked rock! you lose $" + bettingAmount);
                     Console.WriteLine("You now have $" + newBalance);
+                   
                     Console.WriteLine();
                     Console.WriteLine("Thanks for playing! Would you like to play again?");
                     Console.WriteLine("YES or NO");
@@ -256,6 +257,7 @@
                     newBalance = bankAccount + bettingAmount;
                     Console.WriteLine("Congrats! the computer picked paper! you win $" + bettingAmount);
                     Console.WriteLine("You now have $" + newBalance);
+                    
                     Console.WriteLine();
                     Console.WriteLine("Thanks for playing! Would you like to play again?");
                     Console.WriteLine("YES or NO");
@@ -278,6 +280,7 @@
                 else if (userChoice == paper && randNum == paper || userChoice == scissors && randNum == scissors || userChoice == rock && randNum == rock)
                 {
                     Console.WriteLine("The computer also picked that! You tie!");
+                    
                     Console.WriteLine();
                     Console.WriteLine("Thanks for playing! Would you like to play again?");
                     Console.WriteLine("YES or NO");
@@ -297,7 +300,13 @@
                         done = true;
                         
                     }
-                    ;
+                    else
+                    {
+                        Console.WriteLine("Have a great rest of your day! Thanks for playing!");
+                        Console.ReadLine();
+                        done = true;
+                    }
+                    
                 }
                 else if (userChoice == quit)
                 {
