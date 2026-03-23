@@ -42,11 +42,11 @@
             Console.WriteLine();
             Console.WriteLine("\t 1. You have $500 current in your bank account.");
             Console.WriteLine();
-            Console.WriteLine("\t 2. You will be asked how much money you would like to bet on each round, you can bet up to the amount in your \t bank account");
+            Console.WriteLine("\t 2. You will be asked how much money you would like to bet on each round, you can bet up to the amount in your \t \t \t bank account");
             Console.WriteLine() ;
             Console.WriteLine("\t 3. Every round you will be prompted to pick either rock, paper, or scissors, as will the computer");
             Console.WriteLine();
-            Console.WriteLine("\t 4. If you beat the computer, the money you bet will go to your \t account. If you lose, the money will be taken from your account");
+            Console.WriteLine("\t 4. If you beat the computer, the money you bet will go to your  account. If you lose, the money will be taken \t \t  \t from your account");
             Console.WriteLine();
             Console.WriteLine("READY TO PLAY? TYPE YES");
             ready= Console.ReadLine();
@@ -146,7 +146,7 @@
                         Console.ReadLine();
                         done = true;
                     }
-                    Console.ReadLine();
+                    //Console.ReadLine();
 
 
 
@@ -173,7 +173,7 @@
                         Console.ReadLine();
                         done = true;
                     }
-                    Console.ReadLine();
+                    //Console.ReadLine();
 
 
 
@@ -200,7 +200,7 @@
                         done = true;
                     }
 
-                    Console.ReadLine();
+                    //Console.ReadLine();
 
                 }
                 else if (userChoice == paper && randNum == rock)
@@ -225,7 +225,7 @@
                         done = true;
                     }
 
-                    Console.ReadLine();
+                    //Console.ReadLine();
 
                 }
                 else if (userChoice == scissors && randNum == rock)
@@ -249,7 +249,7 @@
                         Console.ReadLine();
                         done = true;
                     }
-                    Console.ReadLine();
+                    //Console.ReadLine();
                 }
                 else if (userChoice == scissors && randNum == paper)
                 {
@@ -272,7 +272,7 @@
                         Console.ReadLine();
                         done = true;
                     }
-                    Console.ReadLine();
+                    //Console.ReadLine();
 
                 }
                 else if (userChoice == paper && randNum == paper || userChoice == scissors && randNum == scissors || userChoice == rock && randNum == rock)
@@ -286,6 +286,7 @@
                     {
                         Console.WriteLine("Goodluck! Press ENTER:");
                         Console.ReadLine();
+                        
                        
                        
                     }
@@ -296,7 +297,7 @@
                         done = true;
                         
                     }
-                    Console.ReadLine();
+                    ;
                 }
                 else if (userChoice == quit)
                 {
